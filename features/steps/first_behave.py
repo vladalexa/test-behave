@@ -18,7 +18,7 @@ def step_impl(context):
 
 @when("I log in")
 def step_impl(context):
-    passw=open('C:\\Projects\\first_behave\\python_behave_template-master\\pass.txt','r')
+    passw=open('.\\resources\\pass.txt','r')
     actions = ActionChains(context.browser)
     actions.send_keys("vlad")
     actions.send_keys(Keys.TAB)
