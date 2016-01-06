@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 @given("I am on BL log in page")
 def step_impl(context):
 
-    context.browser.get("https://stagingbluelink.tictrac.com/py_api/api/v1/auth/saml2/test_login/vlad")
+    context.browser.get("https://staging1d.tictrac.com")
     context.browser.maximize_window()
 
 
