@@ -9,11 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @given("I am on the {env_selected} login page")
 def step_impl(context,env_selected):
-    option = {
-        "BLstaging": "https://stagingbluelink.tictrac.com/py_api/api/v1/auth/saml2/test_login/",
-        "staging1D": "https://staging1d.tictrac.com"
-    }
-    context.browser.get(option.get(env_selected))
+    
+    context.browser.get('http://www.google.com')
     context.browser.maximize_window()
 
 @when("I click on {element} element")
@@ -36,8 +33,8 @@ def step_impl(context,number):
 @then("I can see the {page_name} page")
 def step_impl(context,page_name):
     option = {
-        "Signup": "Sign up - Tictrac",
-        "Onboarding": "Onboarding - Tictrac"
+        "Signup": "Sign up",
+        "Onboarding": "Onboarding"
     }
     assert (context.browser.title) == option.get(page_name)
 
