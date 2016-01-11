@@ -1,5 +1,6 @@
 from behave import *
 import time,os
+import requests
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
@@ -20,6 +21,7 @@ def step_impl(context,element):
         "Signup": "//div[@class='auth-form__footer']/p/a",
         "Cancel": "//button[@analytics-label='cancel']"
     }
+    r=requests.get('http://google.com')
     link = context.browser.find_element_by_xpath(option.get(element))
     link.click()
     context.execute_steps(u"""
